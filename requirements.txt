@@ -8,3 +8,4 @@ matplotlib
 seaborn
 requests
 python-dotenv
+webdriver-manager
