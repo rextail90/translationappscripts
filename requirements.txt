@@ -1,0 +1,10 @@
+pandas
+numpy
+sentence-transformers
+torch
+nltk
+selenium
+matplotlib
+seaborn
+requests
+python-dotenv
