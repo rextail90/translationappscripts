@@ -1,0 +1,17 @@
+case_id,domain,translator,source_lang,target_lang,source_text,reference_translation,translated_text,bleu,semantic_similarity,tone_score,error_category
+1,restaurant,ReversoContext,arabic,english,أريد حجز طاولة لشخصين الساعة الثامنة مساءً.,I would like to reserve a table for two at 8 pm.,,0.0,0.0,0.0,literal_mistranslation
+2,restaurant,ReversoContext,arabic,english,هل يمكنني رؤية قائمة الطعام من فضلك؟,"May I see the menu, please?",,0.0,0.0,0.0,literal_mistranslation
+3,restaurant,ReversoContext,arabic,english,أعاني من حساسية تجاه المكسرات، هل يوجد طبق خالٍ منها؟,I am allergic to nuts; is there a dish without them?,,0.0,0.0,0.0,literal_mistranslation
+4,restaurant,ReversoContext,arabic,english,نود تقسيم الفاتورة بالتساوي بيننا.,We would like to split the bill evenly between us.,,0.0,0.0,0.0,literal_mistranslation
+5,academic,ReversoContext,arabic,english,تشير هذه الدراسة إلى أن استخدام النماذج اللغوية يحسن جودة الترجمة الآلية.,This study indicates that using language models improves the quality of machine translation.,,0.0,0.0,0.0,literal_mistranslation
+6,academic,ReversoContext,arabic,english,تؤكد النتائج أهمية جمع بيانات متنوعة لتدريب الأنظمة الذكية.,The results emphasize the importance of collecting diverse data to train intelligent systems.,,0.0,0.0,0.0,literal_mistranslation
+7,academic,ReversoContext,arabic,english,يهدف هذا البحث إلى تحليل تأثير الخوارزميات الحديثة على دقة التنبؤ.,This research aims to analyze the impact of modern algorithms on prediction accuracy.,,0.0,0.0,0.0,literal_mistranslation
+8,academic,ReversoContext,arabic,english,تتطلب المنهجية المقترحة موارد حوسبة عالية لكنها توفر نتائج أكثر استقراراً.,The proposed methodology requires high computing resources but provides more stable results.,,0.0,0.0,0.0,literal_mistranslation
+9,poetry,ReversoContext,arabic,english,يا ليلُ الصبُّ متى غده؟ أقيامُ الساعةِ موعدُه؟,"O night of the longing lover, when will his dawn come? Is the Day of Judgment his appointed time?",,0.0,0.0,0.0,literal_mistranslation
+10,poetry,ReversoContext,arabic,english,أحنّ إلى خبز أمي وقهوة أمي ولمسة أمي.,"I long for my mother's bread, my mother's coffee, and my mother's touch.",,0.0,0.0,0.0,literal_mistranslation
+11,poetry,ReversoContext,arabic,english,قلبي يحدثني بأنك متلفي، روحي فداك عرفت أم لم تعلمِ.,My heart tells me that you will ruin me; my soul is yours whether you know it or not.,,0.0,0.0,0.0,literal_mistranslation
+12,poetry,ReversoContext,arabic,english,سافرت فيكِ ولم أبرح مكاني.,I traveled within you without ever leaving my place.,,0.0,0.0,0.0,literal_mistranslation
+13,travel,ReversoContext,arabic,english,أين بوابة رحلة الخطوط القطرية المتجهة إلى الدوحة؟,Where is the gate for the Qatar Airways flight to Doha?,,0.0,0.0,0.0,literal_mistranslation
+14,travel,ReversoContext,arabic,english,ما هو رقم السير لالتقاط الحقائب؟,What is the baggage claim carousel number?,,0.0,0.0,0.0,literal_mistranslation
+15,travel,ReversoContext,arabic,english,رحلتي تأخرت، كيف يمكنني إعادة حجزها على رحلة أخرى؟,My flight is delayed; how can I rebook it on another flight?,,0.0,0.0,0.0,literal_mistranslation
+16,travel,ReversoContext,arabic,english,هل يوجد قطار مباشر من المطار إلى وسط المدينة؟,Is there a direct train from the airport to the city center?,,0.0,0.0,0.0,literal_mistranslation

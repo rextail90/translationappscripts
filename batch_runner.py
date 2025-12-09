@@ -5,54 +5,48 @@ from typing import List, Dict
 
 import pandas as pd
 
-from config import DATA_FILE, OUTPUT_LOG
-from translators.deepl_api import DeepLTranslator
-from translators.google_api import GoogleTranslateAPITranslator
-from translators.reverso_api import ReversoTranslator
-from translators.itranslate_ui import ITranslateTranslator
+from config import (
+    DATA_FILE,
+    OUTPUT_LOG,
+    SOURCE_LANG_COLUMN,
+    TARGET_LANG_COLUMN,
+    TEXT_COLUMN,
+    ID_COLUMN,
+    ENABLED_TRANSLATORS,
+)
 from scoring import evaluate_translation
 from error_analysis import classify_error
 
+
 def build_translators():
+    """Instantiate all enabled translators from config.ENABLED_TRANSLATORS."""
     translators = []
-    # If an API key is missing, you can skip that translator
-    try:
-        translators.append(DeepLTranslator())
-    except Exception as e:
-        print("Skipping DeepL:", e)
-
-    try:
-        translators.append(GoogleTranslateAPITranslator())
-    except Exception as e:
-        print("Skipping Google Translate API:", e)
-
-    # UI-based
-    try:
-        translators.append(ReversoTranslator())
-    except Exception as e:
-        print("Skipping Reverso:", e)
-
-    try:
-        translators.append(ITranslateTranslator())
-    except Exception as e:
-        print("Skipping iTranslate:", e)
-
+    for key, cls in ENABLED_TRANSLATORS.items():
+        try:
+            t = cls()
+            translators.append(t)
+        except Exception as e:
+            print(f"[WARN] Skipping translator {key}: {e}")
     return translators
 
+
 def run_batch():
+    # Make sure results directory exists
     os.makedirs(os.path.dirname(OUTPUT_LOG), exist_ok=True)
+
+    # Load test cases
     df = pd.read_csv(DATA_FILE)
 
     translators = build_translators()
     rows: List[Dict] = []
 
     for _, row in df.iterrows():
-        case_id = row["id"]
+        case_id = row[ID_COLUMN]
         domain = row.get("domain", "")
-        src_lang = row["source_lang"]
-        tgt_lang = row["target_lang"]
-        src_text = row["source_text"]
-        ref = row["reference_translation"]
+        src_lang = row[SOURCE_LANG_COLUMN]
+        tgt_lang = row[TARGET_LANG_COLUMN]
+        src_text = row[TEXT_COLUMN]
+        ref = row["reference_translation"]  # keep this name fixed in CSV
 
         for translator in translators:
             try:
@@ -60,12 +54,16 @@ def run_batch():
             except Exception as e:
                 print(f"[ERROR] {translator.name} failed on case {case_id}: {e}")
                 translated = ""
-            
-            metrics = evaluate_translation(ref, translated) if translated else {
-                "bleu": 0.0,
-                "semantic_similarity": 0.0,
-                "tone_score": 0.0,
-            }
+
+            if translated:
+                metrics = evaluate_translation(ref, translated)
+            else:
+                metrics = {
+                    "bleu": 0.0,
+                    "semantic_similarity": 0.0,
+                    "tone_score": 0.0,
+                }
+
             err_type = classify_error(ref, translated, metrics)
 
             rows.append(
