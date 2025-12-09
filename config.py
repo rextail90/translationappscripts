@@ -3,9 +3,9 @@
 import os
 from dotenv import load_dotenv
 
-#from translators.google_api import GoogleUITranslator
-#from translators.deepl_api import DeepLUITranslator
-#from translators.itranslate_ui import ITranslateUITranslator
+from translators.google_api import GoogleUITranslator
+from translators.deepl_api import DeepLUITranslator
+from translators.itranslate_ui import ITranslateUITranslator
 from translators.reverso_api import ReversoTranslator
 
 load_dotenv()
@@ -20,9 +20,9 @@ DATA_FILE = "data/test_cases.csv"           # your Deliverable 2B test cases
 OUTPUT_LOG = "results/translation_results.csv"
 
 ENABLED_TRANSLATORS = {
-    #"google_ui": GoogleUITranslator,
-    #"deepl_ui": DeepLUITranslator,
-    #"itranslate_ui": ITranslateUITranslator,
+    "google_ui": GoogleUITranslator,
+    "deepl_ui": DeepLUITranslator,
+    "itranslate_ui": ITranslateUITranslator,
     "reverso": ReversoTranslator,
 }
 

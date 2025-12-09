@@ -9,3 +9,4 @@ seaborn
 requests
 python-dotenv
 webdriver-manager
+tabulate

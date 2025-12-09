@@ -1,0 +1,981 @@
+<table border="1" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>case_id</th>
+      <th>domain</th>
+      <th>translator</th>
+      <th>source_lang</th>
+      <th>target_lang</th>
+      <th>source_text</th>
+      <th>reference_translation</th>
+      <th>translated_text</th>
+      <th>bleu</th>
+      <th>semantic_similarity</th>
+      <th>tone_score</th>
+      <th>error_category</th>
+      <th>pass_fail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>restaurant</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أريد حجز طاولة لشخصين الساعة الثامنة مساءً.</td>
+      <td>I would like to reserve a table for two at 8 pm.</td>
+      <td>I want to reserve a table for two at 8pm.</td>
+      <td>0.540880</td>
+      <td>0.984755</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>restaurant</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>هل يمكنني رؤية قائمة الطعام من فضلك؟</td>
+      <td>May I see the menu, please?</td>
+      <td>Can I see the menu please?</td>
+      <td>0.251198</td>
+      <td>0.964911</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>restaurant</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أعاني من حساسية تجاه المكسرات، هل يوجد طبق خالٍ منها؟</td>
+      <td>I am allergic to nuts; is there a dish without them?</td>
+      <td>I have an allergy to nuts, is there a dish that is free of them?</td>
+      <td>0.189224</td>
+      <td>0.937911</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>restaurant</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>نود تقسيم الفاتورة بالتساوي بيننا.</td>
+      <td>We would like to split the bill evenly between us.</td>
+      <td>We would like to split the bill equally between us.</td>
+      <td>0.707107</td>
+      <td>0.957641</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>academic</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تشير هذه الدراسة إلى أن استخدام النماذج اللغوية يحسن جودة الترجمة الآلية.</td>
+      <td>This study indicates that using language models improves the quality of machine translation.</td>
+      <td>This study indicates that the use of linguistic models improves the quality of machine translation.</td>
+      <td>0.570282</td>
+      <td>0.986188</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>academic</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تؤكد النتائج أهمية جمع بيانات متنوعة لتدريب الأنظمة الذكية.</td>
+      <td>The results emphasize the importance of collecting diverse data to train intelligent systems.</td>
+      <td>The results confirm the importance of collecting diverse data to train intelligent systems.</td>
+      <td>0.791067</td>
+      <td>0.963988</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>academic</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>يهدف هذا البحث إلى تحليل تأثير الخوارزميات الحديثة على دقة التنبؤ.</td>
+      <td>This research aims to analyze the impact of modern algorithms on prediction accuracy.</td>
+      <td>This research aims to analyze the impact of modern algorithms on prediction accuracy.</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>academic</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تتطلب المنهجية المقترحة موارد حوسبة عالية لكنها توفر نتائج أكثر استقراراً.</td>
+      <td>The proposed methodology requires high computing resources but provides more stable results.</td>
+      <td>The proposed methodology requires high computing resources but provides more stable results.</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>poetry</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>يا ليلُ الصبُّ متى غده؟ أقيامُ الساعةِ موعدُه؟</td>
+      <td>O night of the longing lover, when will his dawn come? Is the Day of Judgment his appointed time?</td>
+      <td>O dark night, when will tomorrow come?</td>
+      <td>0.017549</td>
+      <td>0.686837</td>
+      <td>1.0</td>
+      <td>lost_cultural_meaning</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>poetry</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أحنّ إلى خبز أمي وقهوة أمي ولمسة أمي.</td>
+      <td>I long for my mother's bread, my mother's coffee, and my mother's touch.</td>
+      <td>I long for my mother's bread, my mother's coffee, and my mother's touch.</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>poetry</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>قلبي يحدثني بأنك متلفي، روحي فداك عرفت أم لم تعلمِ.</td>
+      <td>My heart tells me that you will ruin me; my soul is yours whether you know it or not.</td>
+      <td>My heart tells me that you are my soul, may my soul be sacrificed for you, whether you know it or not.</td>
+      <td>0.452985</td>
+      <td>0.852214</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>poetry</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>سافرت فيكِ ولم أبرح مكاني.</td>
+      <td>I traveled within you without ever leaving my place.</td>
+      <td>I traveled with you and did not leave my place.</td>
+      <td>0.085161</td>
+      <td>0.830266</td>
+      <td>1.0</td>
+      <td>tone_mismatch</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>travel</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أين بوابة رحلة الخطوط القطرية المتجهة إلى الدوحة؟</td>
+      <td>Where is the gate for the Qatar Airways flight to Doha?</td>
+      <td>Where is the gateway for the Qatar Airways flight to Doha?</td>
+      <td>0.701688</td>
+      <td>0.955339</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>travel</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>ما هو رقم السير لالتقاط الحقائب؟</td>
+      <td>What is the baggage claim carousel number?</td>
+      <td>What is the walking number for baggage pickup?</td>
+      <td>0.177391</td>
+      <td>0.709808</td>
+      <td>1.0</td>
+      <td>tone_mismatch</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>travel</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>رحلتي تأخرت، كيف يمكنني إعادة حجزها على رحلة أخرى؟</td>
+      <td>My flight is delayed; how can I rebook it on another flight?</td>
+      <td>My flight was delayed, how can I rebook it on another flight?</td>
+      <td>0.670423</td>
+      <td>0.988739</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>travel</td>
+      <td>GoogleTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>هل يوجد قطار مباشر من المطار إلى وسط المدينة؟</td>
+      <td>Is there a direct train from the airport to the city center?</td>
+      <td>Is there a direct train from the airport to the city center?</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>restaurant</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أريد حجز طاولة لشخصين الساعة الثامنة مساءً.</td>
+      <td>I would like to reserve a table for two at 8 pm.</td>
+      <td>I would like to reserve a table for two at 8 p.m.</td>
+      <td>0.903602</td>
+      <td>0.992275</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>restaurant</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>هل يمكنني رؤية قائمة الطعام من فضلك؟</td>
+      <td>May I see the menu, please?</td>
+      <td>I would like to reserve a table for two at 8 p.m.</td>
+      <td>0.020045</td>
+      <td>0.310752</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>restaurant</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أعاني من حساسية تجاه المكسرات، هل يوجد طبق خالٍ منها؟</td>
+      <td>I am allergic to nuts; is there a dish without them?</td>
+      <td>I have a nut allergy. Are there any dishes that don't contain nuts?</td>
+      <td>0.024643</td>
+      <td>0.923537</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>restaurant</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>نود تقسيم الفاتورة بالتساوي بيننا.</td>
+      <td>We would like to split the bill evenly between us.</td>
+      <td>I have a nut allergy. Are there any dishes that don't contain nuts?</td>
+      <td>0.000000</td>
+      <td>-0.006599</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>academic</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تشير هذه الدراسة إلى أن استخدام النماذج اللغوية يحسن جودة الترجمة الآلية.</td>
+      <td>This study indicates that using language models improves the quality of machine translation.</td>
+      <td>This study indicates that the use of linguistic models improves the quality of machine translation.</td>
+      <td>0.570282</td>
+      <td>0.986188</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>academic</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تؤكد النتائج أهمية جمع بيانات متنوعة لتدريب الأنظمة الذكية.</td>
+      <td>The results emphasize the importance of collecting diverse data to train intelligent systems.</td>
+      <td>This study indicates that the use of linguistic models improves the quality of machine translation.</td>
+      <td>0.019731</td>
+      <td>0.324657</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>academic</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>يهدف هذا البحث إلى تحليل تأثير الخوارزميات الحديثة على دقة التنبؤ.</td>
+      <td>This research aims to analyze the impact of modern algorithms on prediction accuracy.</td>
+      <td>This research aims to analyze the impact of modern algorithms on prediction accuracy.</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>academic</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تتطلب المنهجية المقترحة موارد حوسبة عالية لكنها توفر نتائج أكثر استقراراً.</td>
+      <td>The proposed methodology requires high computing resources but provides more stable results.</td>
+      <td>This research aims to analyze the impact of modern algorithms on prediction accuracy.</td>
+      <td>0.000000</td>
+      <td>0.486384</td>
+      <td>1.0</td>
+      <td>lost_cultural_meaning</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>poetry</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>يا ليلُ الصبُّ متى غده؟ أقيامُ الساعةِ موعدُه؟</td>
+      <td>O night of the longing lover, when will his dawn come? Is the Day of Judgment his appointed time?</td>
+      <td>O night of youth, when will tomorrow come? Is the hour of dawn its appointed time?</td>
+      <td>0.144149</td>
+      <td>0.752621</td>
+      <td>1.0</td>
+      <td>tone_mismatch</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>poetry</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أحنّ إلى خبز أمي وقهوة أمي ولمسة أمي.</td>
+      <td>I long for my mother's bread, my mother's coffee, and my mother's touch.</td>
+      <td>O night of youth, when will tomorrow come? Is the hour of dawn its appointed time?</td>
+      <td>0.000000</td>
+      <td>0.170412</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>poetry</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>قلبي يحدثني بأنك متلفي، روحي فداك عرفت أم لم تعلمِ.</td>
+      <td>My heart tells me that you will ruin me; my soul is yours whether you know it or not.</td>
+      <td>My heart tells me that you are my ruin, my soul knows it, whether you realize it or not.</td>
+      <td>0.370613</td>
+      <td>0.895817</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>poetry</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>سافرت فيكِ ولم أبرح مكاني.</td>
+      <td>I traveled within you without ever leaving my place.</td>
+      <td>My heart tells me that you are my ruin, my soul knows it, whether you realize it or not.</td>
+      <td>0.016184</td>
+      <td>0.153759</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>travel</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أين بوابة رحلة الخطوط القطرية المتجهة إلى الدوحة؟</td>
+      <td>Where is the gate for the Qatar Airways flight to Doha?</td>
+      <td>Where is the gate for Qatar Airways flights to Doha?</td>
+      <td>0.455616</td>
+      <td>0.990324</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>travel</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>ما هو رقم السير لالتقاط الحقائب؟</td>
+      <td>What is the baggage claim carousel number?</td>
+      <td>Where is the gate for Qatar Airways flights to Doha?</td>
+      <td>0.056951</td>
+      <td>0.282003</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>travel</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>رحلتي تأخرت، كيف يمكنني إعادة حجزها على رحلة أخرى؟</td>
+      <td>My flight is delayed; how can I rebook it on another flight?</td>
+      <td>My flight was delayed. How can I rebook it on another flight?</td>
+      <td>0.570675</td>
+      <td>0.986176</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>travel</td>
+      <td>DeepLUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>هل يوجد قطار مباشر من المطار إلى وسط المدينة؟</td>
+      <td>Is there a direct train from the airport to the city center?</td>
+      <td>My flight was delayed. How can I rebook it on another flight?</td>
+      <td>0.000000</td>
+      <td>0.250782</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>restaurant</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أريد حجز طاولة لشخصين الساعة الثامنة مساءً.</td>
+      <td>I would like to reserve a table for two at 8 pm.</td>
+      <td>I want to book a table for two at 8:00 p.m.</td>
+      <td>0.348469</td>
+      <td>0.895834</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>restaurant</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>هل يمكنني رؤية قائمة الطعام من فضلك؟</td>
+      <td>May I see the menu, please?</td>
+      <td>Can I see the menu, please?</td>
+      <td>0.759836</td>
+      <td>0.974378</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>restaurant</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أعاني من حساسية تجاه المكسرات، هل يوجد طبق خالٍ منها؟</td>
+      <td>I am allergic to nuts; is there a dish without them?</td>
+      <td>I'm allergic to nuts. Is there a plate free of it?</td>
+      <td>0.073409</td>
+      <td>0.912029</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>restaurant</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>نود تقسيم الفاتورة بالتساوي بيننا.</td>
+      <td>We would like to split the bill evenly between us.</td>
+      <td>We want to divide the bill equally between us.</td>
+      <td>0.088527</td>
+      <td>0.900587</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>academic</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تشير هذه الدراسة إلى أن استخدام النماذج اللغوية يحسن جودة الترجمة الآلية.</td>
+      <td>This study indicates that using language models improves the quality of machine translation.</td>
+      <td>This study suggests that the use of language models improves the quality of automated translation.</td>
+      <td>0.385032</td>
+      <td>0.959268</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>academic</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تؤكد النتائج أهمية جمع بيانات متنوعة لتدريب الأنظمة الذكية.</td>
+      <td>The results emphasize the importance of collecting diverse data to train intelligent systems.</td>
+      <td>The results confirm the importance of collecting diverse data to train smart systems.</td>
+      <td>0.626284</td>
+      <td>0.929840</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>academic</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>يهدف هذا البحث إلى تحليل تأثير الخوارزميات الحديثة على دقة التنبؤ.</td>
+      <td>This research aims to analyze the impact of modern algorithms on prediction accuracy.</td>
+      <td>This research aims to analyze the impact of modern algorithms on the accuracy of prediction.</td>
+      <td>0.701206</td>
+      <td>0.992434</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>academic</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تتطلب المنهجية المقترحة موارد حوسبة عالية لكنها توفر نتائج أكثر استقراراً.</td>
+      <td>The proposed methodology requires high computing resources but provides more stable results.</td>
+      <td>The proposed methodology requires high computing resources, but it provides more stable results.</td>
+      <td>0.592303</td>
+      <td>0.993941</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>poetry</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>يا ليلُ الصبُّ متى غده؟ أقيامُ الساعةِ موعدُه؟</td>
+      <td>O night of the longing lover, when will his dawn come? Is the Day of Judgment his appointed time?</td>
+      <td>Casting night. When's tomorrow? Is the clock scheduled?</td>
+      <td>0.018009</td>
+      <td>0.494182</td>
+      <td>1.0</td>
+      <td>lost_cultural_meaning</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>poetry</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أحنّ إلى خبز أمي وقهوة أمي ولمسة أمي.</td>
+      <td>I long for my mother's bread, my mother's coffee, and my mother's touch.</td>
+      <td>I'm to my mother's bread, my mother's coffee and my mother's touch.</td>
+      <td>0.488610</td>
+      <td>0.875854</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>poetry</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>قلبي يحدثني بأنك متلفي، روحي فداك عرفت أم لم تعلمِ.</td>
+      <td>My heart tells me that you will ruin me; my soul is yours whether you know it or not.</td>
+      <td>NaN</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>poetry</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>سافرت فيكِ ولم أبرح مكاني.</td>
+      <td>I traveled within you without ever leaving my place.</td>
+      <td>NaN</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>travel</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أين بوابة رحلة الخطوط القطرية المتجهة إلى الدوحة؟</td>
+      <td>Where is the gate for the Qatar Airways flight to Doha?</td>
+      <td>Where's the gateway to the country lines to Doha?</td>
+      <td>0.060192</td>
+      <td>0.815116</td>
+      <td>1.0</td>
+      <td>tone_mismatch</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>travel</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>ما هو رقم السير لالتقاط الحقائب؟</td>
+      <td>What is the baggage claim carousel number?</td>
+      <td>What's the traffic number to pick up bags?</td>
+      <td>0.028600</td>
+      <td>0.581852</td>
+      <td>1.0</td>
+      <td>lost_cultural_meaning</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>travel</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>رحلتي تأخرت، كيف يمكنني إعادة حجزها على رحلة أخرى؟</td>
+      <td>My flight is delayed; how can I rebook it on another flight?</td>
+      <td>My flight is late. How can I re-book her on another flight?</td>
+      <td>0.202253</td>
+      <td>0.727639</td>
+      <td>1.0</td>
+      <td>tone_mismatch</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>travel</td>
+      <td>iTranslateUI</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>هل يوجد قطار مباشر من المطار إلى وسط المدينة؟</td>
+      <td>Is there a direct train from the airport to the city center?</td>
+      <td>Is there a direct train from the airport to the downtown?</td>
+      <td>0.815540</td>
+      <td>0.981863</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>restaurant</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أريد حجز طاولة لشخصين الساعة الثامنة مساءً.</td>
+      <td>I would like to reserve a table for two at 8 pm.</td>
+      <td>I want to reserve a table for two at 8 pm.</td>
+      <td>0.736923</td>
+      <td>0.992195</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>restaurant</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>هل يمكنني رؤية قائمة الطعام من فضلك؟</td>
+      <td>May I see the menu, please?</td>
+      <td>Can I see the menu please?</td>
+      <td>0.251198</td>
+      <td>0.964911</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>restaurant</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أعاني من حساسية تجاه المكسرات، هل يوجد طبق خالٍ منها؟</td>
+      <td>I am allergic to nuts; is there a dish without them?</td>
+      <td>I am allergic to nuts, is there a dish free of them?</td>
+      <td>0.436684</td>
+      <td>0.980698</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>restaurant</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>نود تقسيم الفاتورة بالتساوي بيننا.</td>
+      <td>We would like to split the bill evenly between us.</td>
+      <td>We would like to divide the bill equally between us.</td>
+      <td>0.354948</td>
+      <td>0.929930</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>academic</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تشير هذه الدراسة إلى أن استخدام النماذج اللغوية يحسن جودة الترجمة الآلية.</td>
+      <td>This study indicates that using language models improves the quality of machine translation.</td>
+      <td>Arabic\nEnglish</td>
+      <td>0.000000</td>
+      <td>0.224180</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>academic</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تؤكد النتائج أهمية جمع بيانات متنوعة لتدريب الأنظمة الذكية.</td>
+      <td>The results emphasize the importance of collecting diverse data to train intelligent systems.</td>
+      <td>Arabic\nEnglish</td>
+      <td>0.000000</td>
+      <td>-0.059074</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>academic</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>يهدف هذا البحث إلى تحليل تأثير الخوارزميات الحديثة على دقة التنبؤ.</td>
+      <td>This research aims to analyze the impact of modern algorithms on prediction accuracy.</td>
+      <td>Arabic\nEnglish</td>
+      <td>0.000000</td>
+      <td>-0.045399</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>academic</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>تتطلب المنهجية المقترحة موارد حوسبة عالية لكنها توفر نتائج أكثر استقراراً.</td>
+      <td>The proposed methodology requires high computing resources but provides more stable results.</td>
+      <td>Arabic\nEnglish</td>
+      <td>0.000000</td>
+      <td>-0.078535</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>poetry</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>يا ليلُ الصبُّ متى غده؟ أقيامُ الساعةِ موعدُه؟</td>
+      <td>O night of the longing lover, when will his dawn come? Is the Day of Judgment his appointed time?</td>
+      <td>Oh, morning night, when is tomorrow? What is the time for the Hour to come?</td>
+      <td>0.017972</td>
+      <td>0.604424</td>
+      <td>1.0</td>
+      <td>lost_cultural_meaning</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>poetry</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أحنّ إلى خبز أمي وقهوة أمي ولمسة أمي.</td>
+      <td>I long for my mother's bread, my mother's coffee, and my mother's touch.</td>
+      <td>I long for my mother's bread, my mother's coffee, and my mother's touch.</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>poetry</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>قلبي يحدثني بأنك متلفي، روحي فداك عرفت أم لم تعلمِ.</td>
+      <td>My heart tells me that you will ruin me; my soul is yours whether you know it or not.</td>
+      <td>Arabic\nEnglish</td>
+      <td>0.000000</td>
+      <td>0.091140</td>
+      <td>1.0</td>
+      <td>literal_mistranslation</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>poetry</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>سافرت فيكِ ولم أبرح مكاني.</td>
+      <td>I traveled within you without ever leaving my place.</td>
+      <td>I traveled with you and did not leave my place.</td>
+      <td>0.085161</td>
+      <td>0.830266</td>
+      <td>1.0</td>
+      <td>tone_mismatch</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>travel</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>أين بوابة رحلة الخطوط القطرية المتجهة إلى الدوحة؟</td>
+      <td>Where is the gate for the Qatar Airways flight to Doha?</td>
+      <td>Where is the gateway for a Qatar Airways flight to Doha?</td>
+      <td>0.483270</td>
+      <td>0.953345</td>
+      <td>1.0</td>
+      <td>other</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>travel</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>ما هو رقم السير لالتقاط الحقائب؟</td>
+      <td>What is the baggage claim carousel number?</td>
+      <td>What is the traffic number for picking up bags?</td>
+      <td>0.144498</td>
+      <td>0.586842</td>
+      <td>1.0</td>
+      <td>lost_cultural_meaning</td>
+      <td>fail</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>travel</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>رحلتي تأخرت، كيف يمكنني إعادة حجزها على رحلة أخرى؟</td>
+      <td>My flight is delayed; how can I rebook it on another flight?</td>
+      <td>My flight is delayed, how can I rebook it on another flight?</td>
+      <td>0.734889</td>
+      <td>0.997139</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>travel</td>
+      <td>ReversoContext</td>
+      <td>arabic</td>
+      <td>english</td>
+      <td>هل يوجد قطار مباشر من المطار إلى وسط المدينة؟</td>
+      <td>Is there a direct train from the airport to the city center?</td>
+      <td>Is there a direct train from the airport to the city center?</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.0</td>
+      <td>no_major_error</td>
+      <td>pass</td>
+    </tr>
+  </tbody>
+</table>

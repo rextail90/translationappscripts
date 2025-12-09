@@ -41,11 +41,19 @@ class ITranslateUITranslator(BaseTranslator):
         print("[iTranslate] Navigating to page...")
         d.get(self.base_url)
 
-        src_box = self._find_input_box(d)
+        inp = src_box = self._find_input_box(d)
         src_box.clear()
         src_box.send_keys(text)
 
+        inp.clear()
+        inp.send_keys(text)
+
         out_elem = self._find_output_box(d)
+        # after typing into input and locating out_elem
+        WebDriverWait(d, 30).until(
+            lambda drv: out_elem.text.strip() not in ("", text.strip())
+        )
+
         result = out_elem.text.strip()
         print(f"[iTranslate] Got translation: {result!r}")
         return result
